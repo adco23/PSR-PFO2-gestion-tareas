@@ -15,6 +15,7 @@ API REST hecha con Flask y SQLite que permite registrar usuarios, iniciar sesió
 ```
 pfo2/
 ├── servidor.py          # API Flask + SQLite
+├── cliente.py           # Cliente para probar la API
 ├── templates/
 │   └── bienvenida.html  # Página de bienvenida de /tareas
 ├── capturas/            # Capturas de pantalla de las pruebas
@@ -76,6 +77,14 @@ pfo2/
 
    El servidor queda disponible en `http://127.0.0.1:5000`. La base de datos `tareas.db` se crea automáticamente.
 
+6. Probar la API con el cliente en una terminal separada:
+
+   ```bash
+   python cliente.py
+   ```
+
+   Muestra un menú para registrarse, iniciar sesión, ver tareas y cerrar sesión.
+
 ## Endpoints
 
 | Método | Ruta | Descripción | Respuestas |
@@ -113,6 +122,9 @@ curl -i -b cookies.txt http://127.0.0.1:5000/tareas
 # Logout
 curl -i -b cookies.txt -c cookies.txt -X POST http://127.0.0.1:5000/logout
 ```
+
+Usando el cliente `cliente.py`, se pueden ejecutar todas las pruebas de registro, login y acceso a `/tareas` de forma automática.
+
 
 ## Capturas de pantalla
 
