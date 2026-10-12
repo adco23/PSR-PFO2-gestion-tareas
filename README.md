@@ -29,7 +29,7 @@ pfo2/
 1. Clonar el repositorio:
 
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/adco23/PSR-PFO2-gestion-tareas.git
    cd pfo2
    ```
 
